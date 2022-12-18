@@ -1,0 +1,1 @@
+{"uuid":"e7d36550-f6ac-42ce-9968-fc07399e5835","name":"Tests.walletProcessTestCases","children":["94cbf2ae-cd94-4ba4-b1b4-0a7e8e6f3ee6"],"befores":[],"afters":[{"name":"generateReport","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1671368277364,"stop":1671368277364}],"start":1671368267849,"stop":1671368277367}

@@ -52,12 +52,14 @@ import java.util.ArrayList;
 //import static com.github.automated-owl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
 public class TestBase {
-    WebDriver driver;
+    static WebDriver driver;
     LoginPage loginPage;
     DashboardPage dashboardPage;
     loginTestCases login;
     P2P p2p;
     WalletProcessPage wallProPage;
+
+    KYCDocumentPage kycDocument;
 
     @BeforeSuite
     void setEnvironment() {

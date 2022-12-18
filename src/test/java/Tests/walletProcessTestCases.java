@@ -12,5 +12,13 @@ public class walletProcessTestCases extends TestBase {
         WalletProcessPage.addWalletNum();
         WalletProcessPage.addNIDlastDigits();
         WalletProcessPage.clickSubmitWalletNum();
+        WalletProcessPage.clickCashOut();
+        WalletProcessPage.AddAmount();
+        WalletProcessPage.SetMPin();
+        WalletProcessPage.AddDescription();
+        WalletProcessPage.clickVerifyOTP();
+        WalletProcessPage.SetMPin();
+        WalletProcessPage.SetOTP();
+        WalletProcessPage.clickVerifyOTP();
     }
 }

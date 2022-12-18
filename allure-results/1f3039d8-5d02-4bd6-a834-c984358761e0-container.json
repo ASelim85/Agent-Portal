@@ -1,0 +1,1 @@
+{"uuid":"1f3039d8-5d02-4bd6-a834-c984358761e0","name":"Tests.KYCDocumentTestCases","children":["72becabd-3e68-4389-9542-26e2734f599f"],"befores":[],"afters":[{"name":"generateReport","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1671032182582,"stop":1671032182582}],"start":1671032173424,"stop":1671032182588}
