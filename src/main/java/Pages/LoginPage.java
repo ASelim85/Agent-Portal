@@ -8,36 +8,36 @@ public class LoginPage extends PageBase {
         super(driver);
     }
 
-    public static By txtUsername = By.id("basic_login");
-    public static By txtPassword = By.id("basic_password");
-    public static By btnSignIn = By.xpath("//button[@type='submit']");
-    public static By errorMSG = By.xpath("/html/body/div[2]/div");
-    public static By txtOTP = By.id("basic_otp");
-    public static By btnVerifyOTP = By.xpath("//button[@type='submit']");
+    public  By txtUsername = By.id("basic_login");
+    public  By txtPassword = By.id("basic_password");
+    public  By btnSignIn = By.xpath("//button[@type='submit']");
+    public  By errorMSG = By.xpath("/html/body/div[2]/div");
+    public  By txtOTP = By.id("basic_otp");
+    public  By btnVerifyOTP = By.xpath("//button[@type='submit']");
 
-    public static void setUsername(String username) {
+    public void setUsername(String username) {
         setText(txtUsername, username);
     }
 
-    public static void setPassword(String password) {
+    public  void setPassword(String password) {
         setText(txtPassword, password);
     }
 
-    public static void clickSignIn() {
+    public  void clickSignIn() {
         click(btnSignIn);
     }
 
-    public static String GetErrorMSG() {
+    public  String GetErrorMSG() {
         waitElement(errorMSG);
         String InvalidPassErrMSG = action(errorMSG).getText();
         return InvalidPassErrMSG;
     }
 
-    public static void setOTP(String otp) {
+    public  void setOTP(String otp) {
         setText(txtOTP, otp);
     }
 
-    public static void clickVerifyOTP() {
+    public  void clickVerifyOTP() {
         click(btnVerifyOTP);
     }
 }

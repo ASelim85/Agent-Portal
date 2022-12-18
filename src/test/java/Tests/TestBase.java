@@ -44,7 +44,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import ru.yandex.qatools.allure.report.AllureReportBuilder;
 import ru.yandex.qatools.allure.report.AllureReportBuilderException;
 
 import java.util.ArrayList;
@@ -56,8 +55,11 @@ public class TestBase {
     LoginPage loginPage;
     DashboardPage dashboardPage;
     loginTestCases login;
-    P2P p2p;
     WalletProcessPage wallProPage;
+    MyDocumentsPage myDocumentsPage;
+    //    MyDocumentsTestCases myDocumentsTestCases =null;
+    KYCDocumentPage kYCDocumentPage;
+    AddNewKYCPage addNewKYCPage;
 
     @BeforeSuite
     void setEnvironment() {
@@ -81,8 +83,10 @@ public class TestBase {
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
         login = new loginTestCases();
-        p2p = new P2P();
         wallProPage = new WalletProcessPage(driver);
+        myDocumentsPage = new MyDocumentsPage(driver);
+        kYCDocumentPage = new KYCDocumentPage(driver);
+        addNewKYCPage = new AddNewKYCPage(driver);
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 //        new AllureReportBuilder("1.5.4", new File("build/allure-report")).unpackFace();
 //        new AllureReportBuilder("1.5.4", new File("build/allure-report")).processResults(new File("build/allure-results"));
@@ -107,7 +111,6 @@ public class TestBase {
     public void refresh() {
         driver.navigate().refresh();
     }
-
 
 
 //    private void onGenerateAllureReport() {

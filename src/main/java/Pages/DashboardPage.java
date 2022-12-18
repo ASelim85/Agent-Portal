@@ -27,8 +27,8 @@ public class DashboardPage extends PageBase{
     public String P2PCount;
 
     public By btnViewDetials = By.xpath("//span[contains(@class,'ant-typography _view-details-text_617v1_54')]");
-    public static By txtDashboardTitle = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/h1");
-    public static By txtVolumeValue = By.xpath("//span[contains(@class,'volume-amount')]");
+    public By txtDashboardTitle = By.xpath("//*[@id=\"root\"]/div/section/section/main/div/h1");
+    public By txtVolumeValue = By.xpath("//span[contains(@class,'volume-amount')]");
     public By txtVolumetarnscations = By.xpath("//span[contains(@class,'_volume-transaction')]");
     public By txtRevenueValue = By.xpath("//span[contains(@class,'revenue-amount')]");
     public By txtRevenueTrx = By.xpath("//span[contains(@class,'_revenue-transaction')]");
@@ -51,17 +51,17 @@ public class DashboardPage extends PageBase{
     public By Value_P2M = By.id("P2M-ReportingType_P2M");
     public By Value_P2P = By.id("P2P-ReportingType_P2P");
 
-    public static boolean isDashboardDisplayed(){
+    public  boolean isDashboardDisplayed(){
         waitElement(txtDashboardTitle);
         return action(txtDashboardTitle).isDisplayed();
     }
 
-    public static String getDashBoardText() {
+    public  String getDashBoardText() {
         waitElement(txtDashboardTitle);
         String DashTitle = action(txtDashboardTitle).getText();
         return DashTitle;
     }
-    public static boolean checkVolume(){
+    public  boolean checkVolume(){
         waitElement(txtVolumeValue);
         return action(txtVolumeValue).isDisplayed();
     }
