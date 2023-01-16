@@ -1,14 +1,11 @@
 package Tests;
 
 
-import Pages.KYCDocumentPage;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 
-public class MyDocumentsTestCases extends TestBase {
+public class MyDocumentsCasesTest extends BaseTest {
     //    public MyDocumentsTestCases(WebDriver driver) {
 //        super();
 //    }

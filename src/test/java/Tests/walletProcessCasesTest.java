@@ -1,9 +1,8 @@
 package Tests;
 
-import Pages.WalletProcessPage;
 import org.testng.annotations.Test;
 
-public class walletProcessTestCases extends TestBase {
+public class walletProcessCasesTest extends BaseTest {
 
     @Test(priority = 0, enabled = true)
     public void OpenWalletProcess() {

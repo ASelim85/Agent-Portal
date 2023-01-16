@@ -29,8 +29,7 @@ public class LoginPage extends PageBase {
 
     public  String GetErrorMSG() {
         waitElement(errorMSG);
-        String InvalidPassErrMSG = action(errorMSG).getText();
-        return InvalidPassErrMSG;
+        return action(errorMSG).getText();
     }
 
     public  void setOTP(String otp) {

@@ -23,12 +23,12 @@ public class PageBase {
     }
 
     protected  void waitElement(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds (30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds (5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    protected  void setText(By locator, String data) {
+    protected void setText(By locator, String data) {
         waitElement(locator);
         action(locator).isEnabled();
         action(locator).clear();
@@ -44,9 +44,11 @@ public class PageBase {
         Select select;
         select = new Select(action(locator));
         select.selectByIndex(index);
+
     }
 
     public boolean isDisplayed(By locator) {
+
         return action(locator).isDisplayed();
     }
 
@@ -55,9 +57,14 @@ public class PageBase {
         return action(locator).getText();
     }
 
-    public void scrollToElement() {
+    public static void scrollDownToElement() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 1000)", "");
+        js.executeScript("window.scrollBy(0, 1000)");
+    }
+
+    public void scrollUpToElement() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, -1000)");
     }
 
     public void hover(By locator){
@@ -71,5 +78,6 @@ public class PageBase {
         action(locator).sendKeys(photoUrl);
         Runtime.getRuntime().exec(photoUrl);
     }
+
 
 }

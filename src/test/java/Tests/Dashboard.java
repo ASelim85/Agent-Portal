@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.math.BigDecimal;
 
-public class Dashboard extends TestBase{
+public class Dashboard extends BaseTest {
     ATM_CashOut atmCashOut = new ATM_CashOut();
     @Test (priority = 0, enabled = true)
     public void CheckDashboardIsDisplayed() throws IOException, InterruptedException {

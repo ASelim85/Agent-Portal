@@ -1,6 +1,5 @@
 package Tests;
 
-import APIS.P2P;
 import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 //import io.qameta.allure.ConfigurationBuilder;
@@ -50,7 +49,7 @@ import java.util.ArrayList;
 
 //import static com.github.automated-owl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
-public class TestBase {
+public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     DashboardPage dashboardPage;
@@ -60,7 +59,9 @@ public class TestBase {
     //    MyDocumentsTestCases myDocumentsTestCases =null;
     KYCDocumentPage kYCDocumentPage;
     AddNewKYCPage addNewKYCPage;
+    CreateSMEPage createSMEPage;
 
+    MYSMEsPage mySMEsPage;
     @BeforeSuite
     void setEnvironment() {
 //        allureEnvironmentWriter(
@@ -87,6 +88,8 @@ public class TestBase {
         myDocumentsPage = new MyDocumentsPage(driver);
         kYCDocumentPage = new KYCDocumentPage(driver);
         addNewKYCPage = new AddNewKYCPage(driver);
+        createSMEPage = new CreateSMEPage(driver);
+        mySMEsPage = new MYSMEsPage(driver);
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 //        new AllureReportBuilder("1.5.4", new File("build/allure-report")).unpackFace();
 //        new AllureReportBuilder("1.5.4", new File("build/allure-report")).processResults(new File("build/allure-results"));
